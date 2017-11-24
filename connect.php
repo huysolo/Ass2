@@ -1,14 +1,22 @@
 <?php
 
-$sever = "localhost";
-$username = $_SESSION("username");
-$password = $_SESSION("password");
+
+class Connect{
+    public $conn;
+    function __construct()
+    {
+        $sever = "localhost";
+        $username = $_SESSION("username");
+        $password = $_SESSION("password");
 
 // Create connection
-$conn = new mysqli("localhost", $username, $password, "ass2wp");
+        $conn = new mysqli("localhost", $username, $password, "ass2wp");
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        echo "Connected successfully";
+    }
 }
-echo "Connected successfully";
+
