@@ -1,0 +1,148 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 3, 2017, 4:40:04 PM
+    Author     : MinBui
+*/
+
+.container{
+    width: 71%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#m-head{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#m-pic-head{
+    border: none;
+    margin-bottom: 2px;
+}
+
+#slide1{
+   
+        
+}
+
+#m-change1-head{
+    border:none;
+    margin-bottom: 0px;
+}
+
+#m-change1-button{
+margin-left: 0px;
+margin-right: 0px;
+}
+
+#m-change1-button-link{
+    text-decoration: none;
+    background-color: #ada9a9;
+    color: #333;
+        margin-bottom: 0px;
+}
+
+#m-change1-button-link:hover{
+    background-color: #026db5;
+    color: white;
+}
+
+
+#m-change2{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #ded9d9;
+}
+
+#m-change1-row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#m-change1-head1{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#m-change2-head{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+#m-change2-cont{
+    padding-left: 10%;
+    padding-right: 10%
+}
+
+#m-thumbnail{
+    border:none;
+}
+
+#m-thumbnail:hover{
+    border-radius: 0px;
+   border-bottom: solid 5px #0282f9; 
+}
+
+#m-sw{
+    width: 5%;
+    margin-bottom: 2.5%;
+}
+
+.mySlides{
+    display: none;
+}
+.w3-button{
+    display:inline-block;
+    outline:0;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    
+    background-color:#ada9a9;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+.w3-button:hover{
+    background-color: #026db5;
+    color: white;
+}
+.w3-center{text-align:center!important}
+
+#m-shop{
+ margin-left: 0px;
+ margin-right: 0px;
+}
+#m-shop-pic{
+    padding-left: 2px;
+    padding-right: 2px;
+  
+}
+
+
+
+@media only screen and (max-width : 768px) {
+  #m-change1-button-link{
+     font-size:8px;
+  }
+
+}
+
+@media only screen and (max-width : 450px) {
+  #m-change1-button-link{
+    font-size: 5px;
+  }
+
+}
+
+
+
+
+
+
+

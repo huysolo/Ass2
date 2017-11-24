@@ -1,0 +1,208 @@
+body{
+	font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+/*header*/
+#img-logo{
+  width: 80px;
+  height: 80px;
+}
+
+button.navbar-toggle{
+  border-style: none;
+}
+
+nav.navbar.navbar-default{
+  height: 120px;
+  font-weight: bold;
+  border-style: none;
+  border-top-style: solid;
+  border-top-width: 10px;
+  border-top-color: #2c7af7;
+	background-color: white;
+	border-bottom-color: lightgrey;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.dropdown-menu{
+  border-style: none;
+  background-color: #f9fafc	;
+	top: 110px;
+}
+.dropdown-menu a{
+	font-weight: bold;
+
+}
+
+.nav-li, .navbar-right{
+  padding: 35px 12px 20px 12px;
+
+}
+.nav-li:hover{
+  border-bottom-style: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #2c7af7;
+  color: #2c7af7;
+}
+
+.nav-input{
+	border-top-style: solid;
+	border-top-color: white;
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #2c7af7;
+  border-radius: 0px;
+}
+
+.overlay {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+a.thumbnail .overlay {
+  opacity: 1;
+}
+
+a.thumbnail:hover .overlay {
+  opacity: 0.7;
+}
+
+div.form-regis{
+	padding: 5px;
+}
+
+
+/*end header*/
+
+/*footer*/
+footer{
+  margin: 0;
+  padding-left: 10px;
+}
+
+#footer-link{
+  background-image: url(../img/bgrfooter.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 10px;
+  padding: 1%;
+}
+
+.ul-footer h3{
+  color: #f2f2f2;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.ul-footer ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ul-footer a{
+text-decoration: none;
+ color: #a8a8a8;
+ font-weight: 300;
+}
+
+.ul-footer a:hover{
+  text-decoration: none;
+  color: #2c7af7;
+}
+
+.ul-footer a.visited{
+  text-decoration: none;
+}
+
+#footer-signup{
+  background-color: #595959;
+  padding: 25px 20px 20px 25px;
+}
+
+#footer-signup button.btn-default{
+  font-size: 17px;
+  text-transform: uppercase;
+  background-color: #595959;
+  border-radius: 0;
+  border-width: 3px;
+  padding: 15px 20px 15px 20px;
+  border-color: #2c7af7;
+  color: white;
+  font-weight: 300;
+}
+
+#footer-signup button.btn-default:hover{
+  background-color: #2c7af7
+}
+
+#footer-signup span{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2c7af7;
+}
+
+#block-follow{
+  display: inline-block;
+}
+
+#block-follow > a{
+  padding-right: 1px;
+}
+/*end footer*/
+
+@media only screen and (max-width : 920px) {
+  .nav-input{
+    width: 70%;
+  }
+
+  .nav-li, .navbar-right{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  div#navbar.navbar-collapse.collapse.in, div#navbar.navbar-collapse.collapsing{
+    border-top-style: none;
+    background-color: white;
+  }
+
+  a.navbar-brand{
+    padding: 5px 15px 10px 15px;
+  }
+
+  #img-logo{
+    width: 40px;
+    height: 40px;
+  }
+
+  nav.navbar.navbar-default{
+    height: 55px;
+  }
+
+  .nav-li, .navbar-right{
+    padding: 6px 12px 6px 12px;
+  }
+
+  .nav-input{
+    width: 100%;
+  }
+
+  nav.navbar.navbar-default{
+    border-top-style: none;
+    border-top-width: 0px;
+  }
+}

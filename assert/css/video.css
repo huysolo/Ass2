@@ -1,0 +1,156 @@
+
+div.caro-div{
+  background-color: rgba(13, 51, 65, 0.6);
+  position: absolute;
+  width: 100%;
+  top: 89%;
+  height: 11%;
+  padding-left: 10%;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  background-position: 0% 0%;
+  margin: auto;
+
+}
+div.onsale, div.caro-text{
+  position: inherit;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+  padding-top: 1.2%;
+}
+div.caro-text{
+  padding-left: 170px;
+}
+div.onsale{
+  background-color: #114470;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+a.thumbnail{
+  border-style: none;
+  border-width: 0px;
+  margin: 0;
+}
+a.thumbnail > div.caption-moviesm{
+  color: #084691;
+  font-weight: bold;
+}
+
+
+
+div#list-moviesm div.title{
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #084691;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+div#list-moviesm  div.col-md-2{
+  padding-right: 0px;
+}
+
+a.thumbnail:hover {
+  text-decoration: none;
+}
+
+a.thumbnail:hover > div.caption-moviesm{
+  color: #1d67c1;
+}
+
+a.thumbnail > div.caption-onsale{
+  color: #1cc138;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px
+}
+
+div#list-trailer{
+  background-image: url("../img/moviebgr.jpeg");
+  background-size: 150%;
+  background-position: center top;
+  padding-bottom: 20px;
+
+}
+
+div#list-trailer .title{
+  background-color: rgba(13, 51, 65, 0.6);
+  padding:15px 10px 30px 10%;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 160px;
+
+}
+
+div#list-trailer a.thumbnail {
+  background-color: rgba(0, 0, 0, 0);
+
+}
+
+div#list-trailer img{
+  width: 100%;
+}
+
+div.caption-trailer{
+  background-color: #002026;
+  color: white;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 30px;
+  font-weight: 500;
+}
+
+div#list-trailer .col-md-3{
+  padding-left: 0px;
+}
+
+div.caption-small{
+  font-size: 10px;
+  padding-bottom: 10px;
+
+}
+#small{
+  display: none;
+  padding-left: 1px;
+}
+.caption-trailersm{
+  color: white;
+  text-align: left;
+  font-weight: 600;
+  font-size: 100%;
+}
+
+@media only screen and (max-width : 1000px){
+  div#list-trailer{
+    background-image: url("../img/moviesmbgr.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+  }
+  #big{
+    display: none;
+  }
+  #small{
+    display: block;
+  }
+  #small img{
+    width: 70%;
+  }
+  div#list-trailer .title{
+    margin-bottom: 5px;
+
+  }
+}
+@media only screen and (max-width : 768px){
+  .caro-div{
+    display: none;
+  }
+}

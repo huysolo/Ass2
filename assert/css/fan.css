@@ -1,0 +1,126 @@
+/*main new*/
+.container{
+  width: 1000px;
+  box-shadow: 2px 2px 4px lightgrey;
+}
+#block-news{
+  background-color: #05152d;
+}
+a:hover{
+  text-decoration: none;
+}
+
+div.title-news{
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-color: #000a19;
+  border-bottom-width: 1px;
+  text-transform: capitalize;
+}
+
+a.post-link{
+  border-style: solid;
+  border-top-style: none;
+  border-left-color: #002359;
+  border-right-color: black;
+  border-bottom-color: black;
+  border-radius: 0;
+  padding: 0px;
+}
+
+a.post-link:hover{
+  border-left-color: #002359;
+  border-right-color: black;
+  border-bottom-color: black;
+}
+
+a:visited{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: none;
+}
+
+a.post-link > img{
+  width: 100%;
+}
+a.post-link > p{
+  background-color: #002254;
+  padding: 7px 7px 7px 7px;
+  margin: 0 auto;
+  color: white;
+  font-weight: 600;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+a.post-link > .tag{
+  background-color: #002254;
+  padding: 7px 7px 7px 7px;
+  margin: 0 auto;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #144087;
+}
+
+#title-fan{
+  font-size: 20px;
+  font-weight: bolder;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  color: #002254;
+}
+
+a.sub-content{
+  box-shadow: 2px 2px 4px #000000;
+  border-style: none;
+  background-color: #04638c;
+}
+
+.sub-content > p.title{
+  font-size: 20px;
+}
+.sub-content > p.summary{
+  color: lightgrey;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #144087;
+}
+
+.button-load{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.button-load > input{
+  padding: 10px 35px 10px 35px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px grey;
+  color: grey;
+  background-color: lightgrey;
+  border-color: white;
+  border-style: solid;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+@media only screen and (max-width : 1100px) {
+  .container{
+    width: 100%;
+  }
+}
