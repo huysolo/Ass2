@@ -8,11 +8,6 @@
 include "../layout/adminHeader.php";
 
 ?>
-<?php
-    $titleErr = $summaryErr = $photosErr =$contentErr = "";
-
-
-?>
 <div class="container">
     <form class="form-group" action="../../core/createBlog.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
@@ -36,7 +31,7 @@ include "../layout/adminHeader.php";
       <div class="form-group">
           <label for="content">Your Content:</label>
           <textarea class="form-control" id="summary" placeholder="" name="content" rows="30"></textarea>
-          <p class="help-block">Insert your post content</p>
+          <p class="help-block">Insert your post content. At least 100 characters</p>
       </div>
       <div class="form-group">
           <input type="text" name="userID" value="0">
