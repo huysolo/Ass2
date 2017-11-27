@@ -41,7 +41,16 @@
 
                     </ul>
                 </li>
-                <li class="nav-li"><a href="../logout.php">LOGOUT</a></li>
+                <?php
+                session_start();
+                if($_SESSION['login_user'] == null)
+                    echo "<li class=\"nav-li\"><a href=\"../login.php\">LOGIN</a></li>";
+                else
+                    echo "<li class=\"nav-li\"><a href=\"#\">Welcome ";
+                    echo $_SESSION['login_user'];
+                    echo "</a></li>";
+                    echo "<li class=\"nav-li\"><a href=\"../../core/logout.php\">LOGOUT</a></li>";
+                ?>
 
             </ul>
             <form class="navbar-form navbar-right" role="search">
