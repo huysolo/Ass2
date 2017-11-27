@@ -8,29 +8,34 @@
 include "../layout/adminHeader.php";
 
 ?>
+<?php
+    $titleErr = $summaryErr = $photosErr =$contentErr = "";
+
+
+?>
 <div class="container">
-    <form class="form-group" action="../../core/createBlog.php" method="post">
-      <div class="form-group">
+    <form class="form-group" action="../../core/createBlog.php" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
         <label for="title">Tittle:</label>
         <input type="text" class="form-control" id="title" placeholder="" name="title">
-        <p class="help-block">Insert your post title</p>
+        <p class="help-block">Insert your post title. At least 10 characters</p>
       </div>
       <div class="form-group">
         <label for="summary">Summary:</label>
         <textarea class="form-control" id="summary" placeholder="" name="summary" rows="5"></textarea>
-        <p class="help-block">Insert your post summary</p>
+        <p class="help-block">Insert your post summary. At least 10 characters</p>
       </div>
       <div class="form-group">
-        <label for="image">Upload Image</label>
-        <input type="file" id="file" placeholder="" name="image" class="custom-file-input">
+        <label for="photos">Upload Image</label>
+        <input type="file" id="file" placeholder="" name="photos" class="custom-file-input">
         <span class="help-block">Only .jpg .png</span>
       </div>
       <div class="checkbox">
-        <label><input type="checkbox"> On Top: </label>
+        <label><input type="checkbox" name="ontop"> On Top: </label>
       </div>
       <div class="form-group">
           <label for="content">Your Content:</label>
-          <textarea class="form-control" id="summary" placeholder="" name="content" rows="5"></textarea>
+          <textarea class="form-control" id="summary" placeholder="" name="content" rows="30"></textarea>
           <p class="help-block">Insert your post content</p>
       </div>
       <div class="form-group">
