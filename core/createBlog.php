@@ -8,40 +8,35 @@
 
 include "../connect.php";
 
-
-$titleErr = $summaryErr = $contentErr = $imgDataErr =0;
+$titleErr = $summaryErr =$contentErr = $imgDataErr = 0;
 //init data
 $title = $_POST["title"] ;
 $summary = $_POST['summary'];
 $content = $_POST['content'];
 $ontop = empty($_POST['ontop']) ? 0 : 1;
+$allowed =  array('gif','png' ,'jpg');
 
 $canQuery = 1;
 
 if (strlen($title)<10) {
     $titleErr=1;
-    setcookie('titleErr', 'Your title is to short', time()+ 10);
-    $_GET['titleErr']="Your title is to short";
     $canQuery=0;
 }
 if (strlen($summary)<10){
     $summaryErr=1;
-    setcookie('summaryErr', 'Your summary is to short', time()+ 5000);
     $canQuery=0;
 }
 if (strlen($content)<100) {
     $contentErr=1;
-    $_GET['contentErr']="Your content is to short";
     $canQuery=0;
 }
 if(!file_exists($_FILES['photos']['tmp_name'])){
     $imgDataErr=1;
-    $_GET['photosErr'] = "Please insert an image";
     $canQuery=0;
 }
-else if ($_FILES['photos']['type'] != 'jpg' && $_FILES['photos']['type'] != 'png'){
+else if ($_FILES['photos']['type']  != 'image/jpeg' && $_FILES['photos']['type'] != 'image/png'){
+    setcookie('imgDataErr', 'Wrong image type', time()+ 12);
     $imgDataErr=2;
-    $_GET['photosErr'] = "Wrong image type";
     $canQuery = 0;
 }
 
@@ -57,5 +52,5 @@ if ($canQuery == 1) {
     }
 }
 else{
-    header('Location: ../views/admin/createBlog.php');
+    header('Location: ../views/admin/createBlog.php?titleErr='.$titleErr .'&summaryErr='.$summaryErr .'&contentErr='.$contentErr . '&imgDataErr='.$imgDataErr);
 }

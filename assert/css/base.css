@@ -162,7 +162,6 @@ text-decoration: none;
   padding-right: 1px;
 }
 /*end footer*/
-
 @media only screen and (max-width : 920px) {
   .nav-input{
     width: 70%;
