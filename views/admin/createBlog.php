@@ -36,8 +36,22 @@ include "../layout/adminHeader.php";
         <p class="help-block">Insert your post summary. At least 10 characters</p>
       </div>
       <div class="form-group">
-        <label for="photos">Upload Image</label>
-          <input type="file" id="file" placeholder="" name="photos">
+        <label for="photos">Upload Image: </label>
+          <div class="input-group image-preview">
+              <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+              <span class="input-group-btn">
+                    <!-- image-preview-clear button -->
+                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                        <span class="glyphicon glyphicon-remove"></span> Clear
+                    </button>
+                  <!-- image-preview-input -->
+                    <div class="btn btn-default image-preview-input">
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        <span class="image-preview-input-title">Browse</span>
+                        <input type="file" accept="image/png, image/jpeg, image/gif" name="photos"/> <!-- rename it -->
+                    </div>
+                </span>
+          </div>
           <span style="color: red">
               <?php
               if(isset($_GET['imgDataErr'])){
@@ -52,9 +66,7 @@ include "../layout/adminHeader.php";
            </span>
         <span class="help-block">Only .jpg .png</span>
       </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="ontop"> On Top: </label>
-      </div>
+
       <div class="form-group">
           <label for="content">Your Content:</label>
           <textarea class="form-control" id="summary" placeholder="" name="content" rows="30"></textarea>
@@ -67,12 +79,17 @@ include "../layout/adminHeader.php";
            </span>
           <p class="help-block">Insert your post content. At least 100 characters</p>
       </div>
-      <div class="form-group">
-          <input type="text" name="userID" value="0">
-      </div>
+        <div class="checkbox checkbox-info">
+            <input id="checkbox4" type="checkbox" name="ontop">
+            <label for="checkbox4" style="font-weight: bold">
+                Make this post on top
+            </label>
+        </div>
       <button type="submit" name="button" class="btn btn-primary">Submit</button>
       <button type="reset" name="button" class="btn btn-danger">Reset</button>
     </form>
 </div>
+<script src="../../assert/js/fileupload.js">
+</script>
 <?php
 include "../layout/footer.php";?>
