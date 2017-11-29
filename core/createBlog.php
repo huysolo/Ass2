@@ -14,7 +14,7 @@ $title = $_POST["title"] ;
 $summary = $_POST['summary'];
 $content = $_POST['content'];
 $ontop = empty($_POST['ontop']) ? 0 : 1;
-$allowed =  array('gif','png' ,'jpg');
+
 
 $canQuery = 1;
 
@@ -36,29 +36,31 @@ if(!file_exists($_FILES['photos']['tmp_name'])){
     $canQuery=0;
 }
 else if ( $_FILES['photos']['type']  != 'image/jpeg' && $_FILES['photos']['type'] != 'image/png'){
-    setcookie('imgDataErr', 'Wrong image type', time()+ 12);
     $imgDataErr=2;
     $canQuery = 0;
 }
-echo $titleErr;
-echo $summaryErr;
-echo $contentErr;
-echo $imgDataErr;
 
 
 if ($canQuery == 1) {
+    $target = "../assert/images/" . basename($_FILES['photos']['name']);
+    $photos = $_FILES['photos']['name'];
 
-    $imgData = mysqli_real_escape_string($conn, file_get_contents($_FILES['photos']['tmp_name']));
-    $content = mysqli_real_escape_string($conn, $content);
-    echo $content;
-    $sql = "INSERT INTO blog (Title, Content, Photos, OnTop, UserID) VALUE ('$title', '$content','$imgData', '$ontop', '1')";
-    //trigger_error(mysqli_error($conn)." ".$sql);
+    //$imgData = mysqli_real_escape_string($conn, file_get_contents($_FILES['photos']['tmp_name']));
+    //$content = mysqli_real_escape_string($conn, $content);
+    $sql = "INSERT INTO blog (Title, Content, Photos, OnTop, Summary, UserID) VALUE ('$title', '$content','$photos', '$ontop', '$summary', '1')";
+
     if ($conn->query($sql)) {
+        if(move_uploaded_file($_FILES['photos']['tmp_name'],$target)){
+            echo 'Uploaded';
+        }
+        else{
+            echo "There're somethings wrong when uploading your images! Please submit your post again";
+        }
         header('Location: ../views/admin/listBlog.php');
     } else {
         echo "There're somethings wrong! Please submit your post again";
-        //header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
+
 }
 else{
     header('Location: ../views/admin/createBlog.php?titleErr='.$titleErr .'&summaryErr='.$summaryErr .'&contentErr='.$contentErr . '&imgDataErr='.$imgDataErr);
