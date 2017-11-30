@@ -50,6 +50,8 @@ if ($canQuery == 1) {
     $sql = "INSERT INTO blog (Title, Content, Photos, OnTop, Summary, UserID) VALUE ('$title', '$content','$photos', '$ontop', '$summary', '1')";
 
     if ($conn->query($sql)) {
+        $lastId = $conn->insert_id;
+
         if(move_uploaded_file($_FILES['photos']['tmp_name'],$target)){
             echo 'Uploaded';
         }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2017 at 02:28 PM
+-- Generation Time: Nov 30, 2017 at 10:40 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -33,11 +33,18 @@ CREATE TABLE `blog` (
   `Title` varchar(255) NOT NULL,
   `ReleaseDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Content` text NOT NULL,
-  `Photos` blob NOT NULL,
+  `Photos` varchar(200) NOT NULL,
   `OnTop` tinyint(1) NOT NULL,
   `UserID` int(10) NOT NULL,
   `Summary` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blog` (`BlogID`, `Title`, `ReleaseDate`, `Content`, `Photos`, `OnTop`, `UserID`, `Summary`) VALUES
+  (54, 'The Killing Joke Volume 2 Review', '2017-11-30 09:01:14', '<p>Feet evil to hold long he open knew an no. Apartments occasional boisterous as solicitude to introduced. Or fifteen covered we enjoyed demesne is in prepare. In stimulated my everything it literature. Greatly explain attempt perhaps in feeling he. House men taste bed not drawn joy. Through enquire however do equally herself at. Greatly way old may you present improve. Wishing the feeling village him musical.</p>\r\n\r\n<p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>\r\n', '4Rl4ze9Dc9Dj3wrVqiGmlg-x4ELQaKe1WbS5nZqobjE.jpg', 1, 1, 'Feet evil to hold long he open knew an no. Apartments occasional boisterous as solicitude to introduced. Or fifteen covered we enjoyed demesne is in prepare. In stimulated my everything it literature. Greatly explain attempt perhaps in feeling he. Ho');
 
 -- --------------------------------------------------------
 
@@ -206,7 +213,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `BlogID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `BlogID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 --
 -- AUTO_INCREMENT for table `category`
 --
