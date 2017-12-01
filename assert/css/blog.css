@@ -34,7 +34,8 @@
     background-color: #37d980;
     border-color: #37d980;
     border-radius:0;
-    margin-bottom:10px
+    margin-bottom:10px;
+    margin-left: 5px;
 }
 .btn-blog:hover,
 .btn-blog:focus,
@@ -47,3 +48,12 @@
 }
 h2{color:#34ca78;}
 .margin10{margin-bottom:10px; margin-right:10px;}
+
+.btn-blog2{
+    background-color: #00a8db;
+    border-color: #00a8db;
+}
+.btn-blog3{
+    background-color: #cc0000;
+    border-color: #cc0000;
+}

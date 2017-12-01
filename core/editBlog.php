@@ -36,12 +36,11 @@ if (strlen($content)<100) {
     $canQuery=0;
 }
 
-if ( file_exists($_FILES['photos']['tmp_ name']) && $_FILES['photos']['type']  != 'image/jpeg' && $_FILES['photos']['type'] != 'image/png'){
+if ( file_exists($_FILES['photos']['tmp_name']) && $_FILES['photos']['type']  != 'image/jpeg' && $_FILES['photos']['type'] != 'image/png'){
     $imgDataErr=2;
     $canQuery = 0;
 }
 echo $_FILES['photos']['tmp_name'];
-
 
 if ($canQuery == 1) {
     $target = "../assert/images/" . basename($_FILES['photos']['name']);
@@ -54,6 +53,7 @@ if ($canQuery == 1) {
         $sql= "UPDATE blog SET Title='$title', Summary = '$summary', Content = '$content', OnTop = '$ontop' WHERE BlogID=$blogId";
     }
     if ($conn->query($sql)) {
+        $last_id = $conn->insert_id;
         if(move_uploaded_file($_FILES['photos']['tmp_name'],$target)){
             echo 'Uploaded';
         }
@@ -69,10 +69,11 @@ else{
     $url = "../views/admin/editBlog.php?titleErr=$titleErr&summaryErr=$summaryErr&contentErr$contentErr&imgDataErr=$imgDataErr";
     echo '<script>function redirect() {document.getElementById("frm1").submit();}</script>';
 
-    //echo '<body onload="redirect()">';
+    echo '<body onload="redirect()">';
     echo '<form action="'.$url.'" method="post" name="frm1" id="frm1">';
     echo '<input style="visibility: hidden" name="blogId" value="'. $blogId.'">';
     echo '</form>';
+    echo '</body>';
 }
 
 

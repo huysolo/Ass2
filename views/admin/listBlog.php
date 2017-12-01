@@ -25,7 +25,7 @@ $result = $conn->query("SELECT * FROM BLOG");
                     echo '<article><p>'. $rows["Summary"] . '</p></article>';
                     $thisId = $rows["BlogID"];
 
-                    echo "<input style='visibility: hidden' value='$thisId' name='blogId'><button type='submit' class='btn btn-primary pull-right' name='edit'>Edit</button><button type='submit' class='btn btn-danger pull-right' name='edit'  formaction='../../core/removeBlog.php'>Delete</button>";
+                    echo "<input style='visibility: hidden' value='$thisId' name='blogId'><button type='submit' class='btn btn-blog pull-right marginBottom10 btn-blog2' name='edit'>Edit</button><button type='submit' class='btn btn-blog pull-right marginBottom10 btn-blog3' name='remove'  formaction='../../core/removeBlog.php'>Delete</button>";
                     echo '</div>';
                     echo '</form>';
 
@@ -36,35 +36,3 @@ $result = $conn->query("SELECT * FROM BLOG");
         <div class="col-md-12 gap10"></div>
     </div>
 </div>
-
-<!--<div class="container">-->
-<!--    <div class="col-md-12">-->
-<!--        <div class="media">-->
-<!--            <div class="media-left media-middle">-->
-<!--                <a href="#">-->
-<!--                    <img class="media-object" src="../../assert/images/bshop.jpg" alt="...">-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="media-body">-->
-<!--                <h4 class="media-heading">Middle aligned media</h4>-->
-<!--                ...-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        --><?php
-//            if($result->num_rows!=0){
-//                while ($rows = $result->fetch_assoc()){
-//
-//                    echo "<form class='form-group' method='post' action='editBlog.php'>";
-//                    echo "<h3>". $rows['Title'] . "</h3>";
-//                    echo "<p>". $rows['Summary'] ."</p>";
-//                    $thisId = $rows["BlogID"];
-//                    echo "<input style='visibility: hidden' value='$thisId' name='blogId'><button type='submit' class='btn btn-primary pull-right'>Edit</button>";
-//                    echo "</form>";
-//                }
-//            }
-//        ?>
-<!--    </div>-->
-<!--</div>-->
-<script>
-
-</script>
