@@ -5,7 +5,7 @@
  * Date: 22/11/2017
  * Time: 8:21 CH
  */
-include "../layout/adminHeader.php";
+include "../layout/header.php";
 
 ?>
 <div class="container">

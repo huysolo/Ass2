@@ -5,11 +5,12 @@
  * Date: 22/11/2017
  * Time: 8:21 CH
  */
-include "../layout/adminHeader.php";
+include "../layout/header.php";
 include  '../../connect.php';
+require '../session_admin.php';
 $result = $conn->query("SELECT * FROM BLOG");
 ?>
-<link type="text/css" href="../../assert/css/blog.css" rel="stylesheet">
+<link type="text/css" href="../../assert/css/list.css" rel="stylesheet">
 <div class="page-header">
     <h1>List of news: </h1>
 </div>

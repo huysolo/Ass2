@@ -6,6 +6,6 @@
  * Time: 8:22 CH
  */
 
-include "../layout/adminHeader.php";
+include "../layout/header.php";
 
 ?>

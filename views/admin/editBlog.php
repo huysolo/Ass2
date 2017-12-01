@@ -5,7 +5,7 @@
  * Date: 22/11/2017
  * Time: 8:21 CH
  */
-include "../layout/adminHeader.php";
+include "../layout/header.php";
 include "../../connect.php";
 $stmt = $conn->prepare("SELECT * FROM BLOG WHERE BlogID = ?");
 $stmt->bind_param('s', $_POST['blogId']);
